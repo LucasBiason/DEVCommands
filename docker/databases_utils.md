@@ -37,7 +37,7 @@ $ docker run -p 5435:5432 \
      --name postgres_dockerzinho \
      -v database_postgres:/var/lib/postgresql/data \
      -e POSTGRES_PASSWORD=admin \
-     -d postgres:10-alpine
+     -d postgres
 ```
 3. Criação do PGadmin para conectar no banco
 ``` bash
