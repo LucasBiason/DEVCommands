@@ -39,6 +39,17 @@ $ docker run -p 5435:5432 \
      -e POSTGRES_PASSWORD=admin \
      -d postgres:10-alpine
 ```
+3. Criação do PGadmin para conectar no banco
+``` bash
+$ docker volume create database_pgadmin
+$ docker run -p 5050:80 \
+     --name pgadmin_dockerzinho \
+     -v database_pgadmin:/var/lib/pgadmin \
+     --env PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org \
+     --env PGADMIN_DEFAULT_PASSWORD=admin
+     -d dpage/pgadmin4
+```
+
 
 ## Dump de Bases
 
